@@ -11,9 +11,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Portal de Alunos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a href="logout.php">Logout</a>
+    <a id="home-logout" href="logout.php">Logout</a>
     <h1>Essa é a Página Principal</h1>
     <p>Olá, usuário do RA <?php echo $user_data["user_ra"] ?>.</p>
     <nav>
