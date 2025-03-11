@@ -19,13 +19,14 @@
         <h1 class="item-titulo"> | Essa é a Página Principal</h1> 
     </div>
 
+    <hr>
 
     <div class="container-alunos">
-        <p>Olá, usuário do RA <?php echo $user_data["user_ra"] ?>.</p><br>
+        <p>Olá, Usuário do RA <?php echo $user_data["user_ra"] ?>.</p>
         <nav>
             <ul>
-                <li><a href="./Views/viewCadastroAlunos.php">Cadastro de Alunos</a></li>
-                <li><a href="./Views/listaAlunos.php">Lista de Alunos</a></li>
+                <li><a class="item-alunos" href="./Views/viewCadastroAlunos.php">Cadastro de Alunos</a></li>
+                <li><a class="item-alunos" href="./Views/listaAlunos.php">Lista de Alunos</a></li>
             </ul>
         </nav>
     </div>
