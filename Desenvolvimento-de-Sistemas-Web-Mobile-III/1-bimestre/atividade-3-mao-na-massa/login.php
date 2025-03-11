@@ -40,15 +40,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form method="POST">
-        <label>Insira o RA:</label><br>
-        <input type="text" name="ra"><br>
-        <label>Insira a Senha:</label><br>
-        <input type="password" name="senha">
-        <br>
-        <input type="submit" value="Login">
-        <br>
-        <a href="cadastro.php">Cadastre-se</a>
-    </form>
+    <div class="container-login">
+        <div class="container-login-dentro">
+            <form method="POST">
+                <label>Insira o RA:</label><br>
+                <input type="text" name="ra"><br>
+                <label>Insira a Senha:</label><br>
+                <input type="password" name="senha">
+                <br>
+                <input type="submit" value="Login">
+                <br>
+                <a href="cadastro.php">Cadastre-se</a>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

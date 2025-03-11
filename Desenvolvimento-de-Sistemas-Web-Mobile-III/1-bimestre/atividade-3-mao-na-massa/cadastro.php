@@ -29,15 +29,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form method="POST">
-        <label>Insira o RA:</label><br>
-        <input type="text" name="ra"><br>
-        <label>Insira a Senha:</label><br>
-        <input type="password" name="senha">
-        <br>
-        <input type="submit" value="Cadastrar">
-        <br>
-        <a href="login.php">Login</a>
-    </form>
+    <div class="container-cadastro">
+        <div class="container-cadastro-dentro">
+            <form method="POST">
+                <label>Insira o RA:</label><br>
+                <input type="text" name="ra"><br>
+                <label>Insira a Senha:</label><br>
+                <input type="password" name="senha">
+                <br>
+                <input type="submit" value="Cadastrar">
+                <br>
+                <a href="login.php">Login</a>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
