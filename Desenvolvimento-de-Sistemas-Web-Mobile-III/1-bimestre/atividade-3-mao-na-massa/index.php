@@ -14,14 +14,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <a id="home-logout" href="logout.php">Logout</a>
-    <h1>Essa é a Página Principal</h1>
-    <p>Olá, usuário do RA <?php echo $user_data["user_ra"] ?>.</p>
-    <nav>
-        <ul>
-            <li><a href="./Views/viewCadastroAlunos.php">Cadastro de Alunos</a></li>
-            <li><a href="./Views/listaAlunos.php">Lista de Alunos</a></li>
-        </ul>
-    </nav>
+    <div class="container-titulo">
+        <a class="item-titulo" id="home-logout" href="logout.php">Logout</a>
+        <h1 class="item-titulo"> | Essa é a Página Principal</h1> 
+    </div>
+
+
+    <div class="container-alunos">
+        <p>Olá, usuário do RA <?php echo $user_data["user_ra"] ?>.</p><br>
+        <nav>
+            <ul>
+                <li><a href="./Views/viewCadastroAlunos.php">Cadastro de Alunos</a></li>
+                <li><a href="./Views/listaAlunos.php">Lista de Alunos</a></li>
+            </ul>
+        </nav>
+    </div>
+
 </body>
 </html>
