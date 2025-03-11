@@ -15,6 +15,12 @@
 <body>
     <a href="logout.php">Logout</a>
     <h1>Essa é a Página Principal</h1>
-    <p>Olá, usuário.</p>
+    <p>Olá, usuário do RA <?php echo $user_data["user_ra"] ?>.</p>
+    <nav>
+        <ul>
+            <li><a href="./Views/viewCadastroAlunos.php">Cadastro de Alunos</a></li>
+            <li><a href="./Views/listaAlunos.php">Lista de Alunos</a></li>
+        </ul>
+    </nav>
 </body>
 </html>
