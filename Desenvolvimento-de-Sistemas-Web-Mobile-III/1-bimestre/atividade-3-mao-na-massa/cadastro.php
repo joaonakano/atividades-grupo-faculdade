@@ -12,7 +12,7 @@
             $query = "insert into users (user_id, user_ra, senha) values ('$user_id', '$ra', '$senha')";
 
             mysqli_query($con, $query);
-            header("Location:k ./login.php");
+            header("Location: ./login.php");
             die;
         } else {
             echo "Insira uma informação válida!";
@@ -34,7 +34,7 @@
         <label>Insira a Senha:</label><br>
         <input type="password" name="senha">
         <br>
-        <input type="submit" value="Login">
+        <input type="submit" value="Cadastrar">
         <br>
         <a href="login.php">Login</a>
     </form>
