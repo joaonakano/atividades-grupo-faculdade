@@ -3,3 +3,30 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
 }
+
+.container-alunos{
+    padding: 10px;
+    margin: 20px;
+    color: white;
+    display: grid;
+    place-items: center;
+    font-size: 30px;
+}
+
+.item-alunos{
+    text-decoration: none;
+}
+
+ul {
+    display: grid;
+    list-style: none;
+    place-items: center;
+}
+
+a {
+    color: lightblue;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}

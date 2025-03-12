@@ -13,7 +13,6 @@ body{
     align-items: center;
     padding: 2px;
     margin: 7px;
-
 } 
 
 .item-titulo{
@@ -60,7 +59,7 @@ li{
     display: flex;
     justify-content: center;
     align-items: center; 
-    height: 100vh;
+    height: 50vh;
 }
 
 .container-universal-dentro {
