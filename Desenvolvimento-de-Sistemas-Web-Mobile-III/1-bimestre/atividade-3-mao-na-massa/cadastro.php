@@ -29,8 +29,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container-cadastro">
-        <div class="container-cadastro-dentro">
+    <div class="container-universal">
+        <div class="container-universal-dentro">
             <form method="POST">
                 <label>Insira o RA:</label><br>
                 <input type="text" name="ra"><br>

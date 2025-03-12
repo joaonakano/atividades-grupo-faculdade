@@ -40,8 +40,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container-login">
-        <div class="container-login-dentro">
+    <div class="container-universal">
+        <div class="container-universal-dentro">
             <form method="POST">
                 <label>Insira o RA:</label><br>
                 <input type="text" name="ra"><br>
