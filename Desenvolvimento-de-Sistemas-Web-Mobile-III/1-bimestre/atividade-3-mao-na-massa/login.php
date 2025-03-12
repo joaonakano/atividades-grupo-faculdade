@@ -8,6 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $ra = $_POST["ra"];
     $senha = $_POST["senha"];
 
+    /* Valida  ase senha é a mesma que a recuperada do Banco de Dados, se sim, armazenam-se os dados no session e direciona para a URL protegida */
     if (!empty($ra) && !empty($senha) && is_numeric($ra)) {
         $query = "select * from users where user_ra = '$ra' limit 1";
         $result = mysqli_query($con, $query);

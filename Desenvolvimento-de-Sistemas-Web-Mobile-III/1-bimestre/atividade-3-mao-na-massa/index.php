@@ -2,6 +2,8 @@
     session_start();
     include("./Models/connection.php");
     include("./Controllers/functions.php");
+
+    /* Valida a conexão com o Banco de Dados e as credenciais do usuário */
     $user_data = check_login($con);
 ?>
 

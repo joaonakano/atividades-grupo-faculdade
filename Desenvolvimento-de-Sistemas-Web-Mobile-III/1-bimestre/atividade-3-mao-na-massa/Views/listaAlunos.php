@@ -1,6 +1,9 @@
 <?php
     include "../Models/cadastroAlunos.php";
+
+    /* Cria-se um objeto com a classe CadastroAlunos que irá intermediar o cadastro e recuperação dos dados */
     $cadastroAlunos = new CadastroAlunos();
+    /* Pegam-se os alunos do session e armazenam-lhes dentro do objeto */
     $cadastroAlunos->getAlunosPeloSession();
 ?>
 
@@ -24,6 +27,7 @@
     </div>
     <main>
         <?php
+        /* Listagem dos Alunos */
             $cadastroAlunos->listarAlunos();
         ?>
     </main>

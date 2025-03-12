@@ -1,5 +1,5 @@
 <?php
-
+    /* Classe responsável por armazenar cada aluno em um Objeto isolado */
     class Aluno {
         private $nome;
         private $curso;

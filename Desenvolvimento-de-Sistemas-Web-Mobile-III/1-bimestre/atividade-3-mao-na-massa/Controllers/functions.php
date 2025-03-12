@@ -1,5 +1,6 @@
 <?php
 
+/* Valida se o usuário está Logado/Em Sessão e pega as informações do Banco de Dados para login automático */
 function check_login($con) {
     if (isset($_SESSION["user_id"])) {
         $id = $_SESSION["user_id"];
@@ -16,6 +17,7 @@ function check_login($con) {
     die;
 }
 
+/* Gerador de números aleatórios, utilizado para a criação dos IDs dos usuários a serem inseridos no Banco de Dados */
 function numero_aleatorio($tamanho) {
     $text = "";
     if ($tamanho < 5) {

@@ -7,6 +7,7 @@
         $ra = $_POST["ra"];
         $senha = $_POST["senha"];
 
+        /* Validação do método submit do formulário, se sim, armazenam-se as informações no Banco de Dados */
         if (!empty($ra) && !empty($senha) && is_numeric($ra)) {
             $user_id = numero_aleatorio(20);
             $query = "insert into users (user_id, user_ra, senha) values ('$user_id', '$ra', '$senha')";
