@@ -74,6 +74,7 @@ form {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    background-color: transparent;
 }
 
 input{
@@ -83,8 +84,9 @@ input{
     background-color: rgb(65, 65, 65);
 }
 
-label{
+label {
     color: #fff;
+    background-color: transparent;
 }
 
 a {
@@ -93,4 +95,17 @@ a {
     align-items: center;
     justify-content: center;
     display: flex;
+}
+
+span {
+    background-color: transparent;
+}
+
+.input-message {
+    background-color: transparent;
+}
+
+.input-message select {
+    border: solid 1px rgb(77, 0, 0);
+    height: 34px;
 }
