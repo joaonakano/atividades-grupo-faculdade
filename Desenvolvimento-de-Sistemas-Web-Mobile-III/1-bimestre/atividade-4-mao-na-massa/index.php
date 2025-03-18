@@ -81,7 +81,7 @@
             foreach ($this->estoque as $produto) {
                 $valorEstoque += $produto->getPreco() * $produto->getQuantidade();
             }
-            $this->setValorEstoque($valorEstoque);
+            $this->setValorEstoque(round($valorEstoque, 2));
         }
 
         public function getValorEstoque() {
@@ -110,7 +110,7 @@
 
         $nome = filter_var($_POST["nomeProduto"], FILTER_SANITIZE_STRING);
         $qtd = filter_var($_POST["qtdProduto"], FILTER_SANITIZE_NUMBER_INT);
-        $preco = filter_var($_POST["precoProduto"], FILTER_SANITIZE_NUMBER_FLOAT);
+        $preco = filter_var($_POST["precoProduto"], FILTER_SANITIZE_SPECIAL_CHARS);
 
         $nome = trim($nome);
         $qtd = trim($qtd);
@@ -150,7 +150,7 @@
         </p>
 
         <p>Insira o Preço do Produto:<br>
-            <input type="number" name="precoProduto" min="0" step="0.5" required>    
+            <input type="number" name="precoProduto" min="0" step="any" required>    
         </p>
 
         <input type="submit" value="Enviar">
