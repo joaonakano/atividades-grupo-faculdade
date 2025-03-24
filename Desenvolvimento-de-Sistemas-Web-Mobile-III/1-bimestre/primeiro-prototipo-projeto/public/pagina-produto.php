@@ -26,13 +26,18 @@
                 <b>Neo Cortex</b> sai correndo atrás de Crash, mas o <b>bandicoot</b> foge e mantem sua namorada cativa.
                 Crash deve correr várias fases, derrotar vilões, pegar jóias para salvar sua <b>namorada</b>. </p>
 
-                <h3>Preço - R$ 5</h3>
-
-
+                <h3>Preço - R$ 5</h3><br>
             </article>
             
-            <img src="images/crash_ps1.gif" alt="Gif do Crash correndo de uma pedra rolante.">
+            <img src="images/crash_ps1.gif" alt="Gif do Crash correndo de uma pedra rolante."><br>
+
+            <button><a href="#">-> ALUGAR <-</a></button><br>
+
         </div>
+
+        <img src="images/ps1.gif" alt="Gif de um PlayStation 1 girando.">
+
+        <footer>Direitos Autorais - 1998</footer>
     </div>
 
 

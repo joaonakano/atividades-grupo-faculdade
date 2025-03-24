@@ -37,12 +37,20 @@ body{
     text-align: center;
 } */
 
-.item h1, h2, h3{
+.item h1, h2{
     padding-top: 3%;
     font-family: 'Pixel Digivolve', sans-serif;
-    color: rgb(230, 13, 157);
+    color: #e60d9d;
     text-align: center;
     text-shadow: 3px 2px #ecca09;
+}
+
+.item h3{
+    padding-top: 3%;
+    font-family: 'Pixel Digivolve', sans-serif;
+    text-align: center;
+    text-shadow: 3px 2px #ecca09;
+    animation: piscar 0.8s infinite;
 }
 
 
@@ -58,6 +66,7 @@ body{
     max-width: 600px;
     font-size: 2rem;
     background-color: rgba(0, 0, 0, 0.589);
+    flex-direction: column;
 }
 
 .container-produto p{
@@ -70,18 +79,51 @@ body{
     text-align: center;
 }
 
-
-img{
+.container-produto img{
     max-width: 100%;
     height: auto;
     object-fit: cover;
     border: 1px solid #646464;
     border-radius: 10px;
+    display: block;
+    margin: 0 auto;
 }
 
+.container-produto button{
+    cursor: pointer;
+    background-color: #ff0000;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    font-size: 1em;
+}
 
+.container-produto a{
+    text-decoration: solid #fff;
+    padding: 5px 10px;
+    color: #fff;
+}
 
+.container-produto a:hover{
+    color: #fff;
+}
 
+.container-produto footer{
+    padding-top: 5%;
+    color: #fff;
+    font-size: 0.50em;
+}
 
+@keyframes piscar {
+    0% {
+        color: #FF0000;
+    }
 
+    50% {
+        color: #e60d9d
+    }
 
+    100% {
+        color: #ff0000
+    }
+}
