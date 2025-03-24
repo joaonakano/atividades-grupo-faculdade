@@ -6,6 +6,11 @@
     <title>Juegos Catalog</title>
 </head>
 <body>
-    
+    <header>
+        <ul>
+            <li><a href="./login.php">Login</a></li>
+            <li><a href="./register.php">Registro</a></li>
+        </ul>
+    </header>
 </body>
 </html>
