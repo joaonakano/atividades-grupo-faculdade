@@ -8,7 +8,10 @@
     <title>DumpStore - Produto</title>
 </head>
 <body>
-    <h1>Pagina de produto</h1>
+    <div class="container-title">
+        <h1>Pagina de produto</h1>
+    </div>
+
     <div class="row">
         <div class="column"><a href="#">teste</a></div>
         <div class="column"><a href="#">teste</a></div>
