@@ -1,0 +1,28 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('images/fundo_grid.gif');
+    background-size: cover;
+}
+
+h1{
+    color: #fff;
+}
+
+.row{
+    display: flex;
+}
+
+.column{
+    flex: 50%;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+    }
+  }
