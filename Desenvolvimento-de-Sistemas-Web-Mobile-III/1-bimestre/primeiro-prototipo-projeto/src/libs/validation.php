@@ -10,6 +10,7 @@ const DEFAULT_VALIDATION_ERRORS = [
     'alphanumeric' => '%s deve conter apenas letras e números',
     'secure' => '%s deve estar entre 8 e 64 caracteres e conter pelo menos 1 número, uma letra maiúscula, uma letra minúscula e um caractere especial',
     'unique' => '%s já existe',
+    'number' => '%s não é um número válido'
 ];
 
 function validate(array $data, array $fields, array $messages = []): array {
@@ -148,4 +149,12 @@ function is_unique(array $data, string $field, string $table, string $column): b
     $stmt->execute();
 
     return $stmt->fetchColumn() === false;
+}
+
+function is_number(array $data, string $field): bool {
+    if (!isset($data[$field])) {
+        return true;
+    }
+
+    return is_numeric($data[$field]) && preg_match('/^\d+(\.\d+)?$/', $data[$field]);
 }
