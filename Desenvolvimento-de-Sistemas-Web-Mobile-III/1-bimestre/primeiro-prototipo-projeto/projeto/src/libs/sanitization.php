@@ -25,40 +25,30 @@ const FILTERS = [
     'url' => FILTER_SANITIZE_URL,
 ];
 
-/**
-* Recursively trim strings in an array
-* @param array $items
-* @return array
-*/
-function array_trim(array $items): array
-{
-    return array_map(function ($item) {
-        if (is_string($item)) {
+// Função que remove espaços somente de strings
+function array_trim(array $items) {
+    return array_map(function($item) {
+        if(is_string($item)) {
             return trim($item);
         } elseif (is_array($item)) {
             return array_trim($item);
-        } else
+        } else {
             return $item;
+        }
     }, $items);
 }
 
-/**
-* Sanitize the inputs based on the rules an optionally trim the string
-* @param array $inputs
-* @param array $fields
-* @param int $default_filter FILTER_SANITIZE_STRING
-* @param array $filters FILTERS
-* @param bool $trim
-* @return array
-*/
-function sanitize(array $inputs, array $fields = [], int $default_filter = FILTER_SANITIZE_STRING, array $filters = FILTERS, bool $trim = true): array
-{
+// Função capaz de remover os caracteres indesejados dos inputs com base em regras específicas
+function sanitize(array $inputs, array $fields = [], int $default_filter = FILTER_SANITIZE_STRING, array $filters = FILTERS, bool $trim = true): array {
+    # Se for definida uma lista de filtros para cada input da lista de inputs, devemos tratar em um array_map
     if ($fields) {
         $options = array_map(fn($field) => $filters[$field], $fields);
         $data = filter_var_array($inputs, $options);
+    # Senão, apenas um filtro será utilizado em toda a lista de inputs
     } else {
         $data = filter_var_array($inputs, $default_filter);
     }
 
+    # Se caso o parâmetro trim for true, ele remove os espaços das strings da lista de inputs, senão, retorna com os espaços
     return $trim ? array_trim($data) : $data;
 }

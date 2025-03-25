@@ -1,13 +1,8 @@
 <?php
 
-/**
- * Connect to the database and returns an instance of PDO class
- * or false if the connection fails
- *
- * @return PDO
- */
-function db(): PDO
-{
+// Conectando ao Banco de Dados pelo PDO
+function db(): PDO {
+    // Variável estática para armazenar o banco de dados apenas uma vez e permanecer com ele, senão, faz uma nova conexão
     static $pdo;
 
     if (!$pdo) {
@@ -18,6 +13,6 @@ function db(): PDO
             [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
         );
     }
-    
+
     return $pdo;
 }

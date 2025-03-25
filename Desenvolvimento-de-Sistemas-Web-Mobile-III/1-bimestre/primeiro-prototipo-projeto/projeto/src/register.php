@@ -1,29 +1,33 @@
 <?php
 
-$errors = [];
 $inputs = [];
+$errors = [];
 
 if (is_post_request()) {
-
     $fields = [
         'username' => 'string | required | alphanumeric | between: 3, 25 | unique: users, username',
         'email' => 'email | required | email | unique: users, email',
         'password' => 'string | required | secure',
         'password2' => 'string | required | same: password',
-        'agree' => 'string | required'
+        'agree' => 'string | required',
     ];
-
-    // custom messages
+    
     $messages = [
+        'email' => [
+            'email' => 'O email não é um endereço válido'
+        ],
+        'password' => [
+            'secure' => 'A senha deve estar entre 8 e 64 caracteres e conter pelo menos 1 número, uma letra maiúscula, uma letra minúscula e um caractere especial'
+        ],
         'password2' => [
-            'required' => 'Please enter the password again',
-            'same' => 'The password does not match'
+            'required' => 'Por gentileza, insira a senha novamente',
+            'same' => 'As senhas não são iguais'
         ],
         'agree' => [
-            'required' => 'You need to agree to the term of services to register'
+            'required' => 'Você precisa aceitar os termos de uso para se registrar'
         ]
     ];
-
+    
     [$inputs, $errors] = filter($_POST, $fields, $messages);
 
     if ($errors) {
@@ -35,10 +39,9 @@ if (is_post_request()) {
 
     if (register_user($inputs['email'], $inputs['username'], $inputs['password'])) {
         redirect_with_message(
-            'login.php',
-            'Your account has been created successfully. Please login here.'
+            '#',
+            'Sua conta foi criada com sucesso. Realize o login'
         );
-
     }
 
 } else if (is_get_request()) {
