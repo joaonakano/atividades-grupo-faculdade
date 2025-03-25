@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+@import url('https://db.onlinewebfonts.com/c/1a3d163c118fdbc06afae4b29e1fa88b?family=McGurr+Script');
+@import url('https://fonts.cdnfonts.com/css/pixel-digivolve');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%; 
+}
+
+body {
+    background-image: url('../images/fundo_grid.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+h1 {
+    font-family: 'Pixel Digivolve', sans-serif;
+    color: #e60d9d;
+    text-align: center;
+    text-shadow: 0.1875rem 0.125rem #ecca09; 
+    margin-top: -10%;
+}
+
+form {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1.25rem; 
+    border-radius: 0.625rem; 
+    box-shadow: 0 0 0.625rem rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 25rem; 
+    margin-top: 5%;
+    font-family: 'Pixel Digivolve', sans-serif;
+    color: #ecca09;
+}
+
+form p {
+    margin-bottom: 0.9375rem; 
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 0.625rem; 
+    margin-top: 0.3125rem;
+    border: 0.0625rem solid #646464; 
+    border-radius: 0.3125rem; 
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-family: 'Pixel Digivolve', sans-serif;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    background-color: #ff0000;
+    border: none;
+    border-radius: 0.3125rem; 
+    padding: 0.625rem 1.25rem; 
+    font-size: 1rem;
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+    font-family: 'Pixel Digivolve', sans-serif;
+}
+
+input[type="submit"]:hover {
+    background-color: #e60d9d;
+}
+
+@media (max-width: 48rem) { 
+    html {
+        font-size: 87.5%; 
+    }
+
+    form {
+        padding: 0.9375rem; 
+    }
+
+    input[type="submit"] {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 30rem) { 
+    html {
+        font-size: 75%; 
+    }
+
+    form {
+        padding: 0.625rem; 
+    }
+
+    input[type="submit"] {
+        font-size: 0.8rem;
+    }
+}

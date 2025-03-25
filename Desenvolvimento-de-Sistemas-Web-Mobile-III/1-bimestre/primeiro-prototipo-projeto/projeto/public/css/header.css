@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+@import url('https://db.onlinewebfonts.com/c/1a3d163c118fdbc06afae4b29e1fa88b?family=McGurr+Script');
+@import url('https://fonts.cdnfonts.com/css/pixel-digivolve');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 100%; /* 1rem = 16px */
+}
+
+body {
+    background-image: url('../images/fundo_grid.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav ul li {
+    font-family: 'Pixel Digivolve', sans-serif;
+}
+
+nav ul li a {
+    color: #e60d9d;
+    text-decoration: none;
+    text-shadow: 3px 2px #ecca09;
+}
+
+main {
+    text-align: center;
+    margin-top: 2rem;
+    flex: 1;
+}
+
+h1 {
+    font-family: 'Pixel Digivolve', sans-serif;
+    color: #e60d9d;
+    text-shadow: 3px 2px #ecca09;
+    margin-bottom: 1rem;
+}
+
+footer {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1rem;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 87.5%; /* 14px */
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 75%; /* 12px */
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

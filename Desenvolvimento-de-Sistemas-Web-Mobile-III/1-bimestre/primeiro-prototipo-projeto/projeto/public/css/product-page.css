@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+@import url('https://db.onlinewebfonts.com/c/1a3d163c118fdbc06afae4b29e1fa88b?family=McGurr+Script'); 
+@import url('https://fonts.cdnfonts.com/css/pixel-digivolve');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+}
+
+body{
+    background-image: url('images/fundo_grid.gif');
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* h1{
+    color: #fff;
+} */
+
+/* .container-title{
+    padding: 2vh;
+    background-color: rgb(44, 44, 44);
+    border: solid #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+} */
+
+.item h1, h2{
+    padding-top: 3%;
+    font-family: 'Pixel Digivolve', sans-serif;
+    color: #e60d9d;
+    text-align: center;
+    text-shadow: 3px 2px #ecca09;
+}
+
+.item h3{
+    padding-top: 3%;
+    font-family: 'Pixel Digivolve', sans-serif;
+    text-align: center;
+    text-shadow: 3px 2px #ecca09;
+    animation: piscar 0.8s infinite;
+}
+
+.container-produto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5vh auto;
+    padding: 15px;
+    width: 90%;
+    max-width: 600px;
+    border: 1px solid #646464;
+    border-radius: 10px;
+    max-width: 600px;
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0, 0.589);
+    flex-direction: column;
+}
+
+.container-produto p{
+    font-family: 'Inter', sans-serif;
+    padding-top: 4%;
+    color: #fff;
+    word-wrap: break-word;
+    width: 100%;
+    font-size: 0.60em;
+    text-align: center;
+}
+
+.container-produto img{
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 1px solid #646464;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+
+.container-produto button{
+    cursor: pointer;
+    background-color: #ff0000;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+    font-size: 1em;
+}
+
+.container-produto a{
+    text-decoration: solid #fff;
+    padding: 5px 10px;
+    color: #fff;
+}
+
+.container-produto a:hover{
+    color: #fff;
+}
+
+.container-produto footer{
+    padding-top: 5%;
+    color: #fff;
+    font-size: 0.50em;
+}
+
+@keyframes piscar {
+    0% {
+        color: #FF0000;
+    }
+
+    50% {
+        color: #e60d9d
+    }
+
+    100% {
+        color: #ff0000
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+
+    .container-produto {
+        width: 95%;
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    .container-produto p {
+        font-size: 0.9rem;
+    }
+
+    .container-produto button {
+        font-size: 0.9rem;
+        padding: 8px 12px;
+    }
+
+    .container-produto footer {
+        font-size: 0.65rem;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+
+    .container-produto {
+        font-size: 1.2rem;
+        padding: 8px;
+    }
+
+    .container-produto p {
+        font-size: 0.8rem;
+    }
+
+    .container-produto button {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+    }
+
+    .container-produto footer {
+        font-size: 0.6rem;
+    }
+}
