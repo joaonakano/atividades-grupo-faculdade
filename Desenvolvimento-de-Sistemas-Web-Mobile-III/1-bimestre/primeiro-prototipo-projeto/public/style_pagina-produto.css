@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
-@import url(https://db.onlinewebfonts.com/c/1a3d163c118fdbc06afae4b29e1fa88b?family=McGurr+Script); 
+@import url('https://db.onlinewebfonts.com/c/1a3d163c118fdbc06afae4b29e1fa88b?family=McGurr+Script'); 
 @import url('https://fonts.cdnfonts.com/css/pixel-digivolve');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
@@ -58,7 +58,8 @@ body{
     align-items: center;
     margin: 5vh auto;
     padding: 15px;
-    width: max-content;
+    width: 90%;
+    max-width: 600px;
     border: 1px solid #646464;
     border-radius: 10px;
     max-width: 600px;
