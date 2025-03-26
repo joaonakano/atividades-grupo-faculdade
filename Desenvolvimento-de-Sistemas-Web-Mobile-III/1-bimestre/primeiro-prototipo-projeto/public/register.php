@@ -15,7 +15,7 @@ if (is_user_logged_in()) {
 <div class="container-principal">
     <form action="register.php" method="post">
         <div class="caixa-win">
-        <h1>Registro</h1>
+            <h1>Registro</h1>
         </div>
         <div class="container-principal-sub">
             
@@ -48,6 +48,9 @@ if (is_user_logged_in()) {
                     <input type="checkbox" name="agree" id="agree" value="checked" <?= $inputs['agree'] ?? '' ?> /> Eu aceito os
                     <a href="#" title="termo de uso">termos de uso</a>
                 </label>
+            </div>
+
+            <div class="erro-sub">
                 <small><?= $errors['agree'] ?? '' ?></small>
             </div>
 
