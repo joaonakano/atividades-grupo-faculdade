@@ -14,42 +14,44 @@ if (is_user_logged_in()) {
 
 <div class="container-principal">
     <form action="register.php" method="post">
-        <h1>Registro</h1>
-        
-        <div>
-            <label for="username">Insira um Nome de Usuário:</label>    
-            <input type="text" name="username" id="username" value="<?= $inputs['username'] ?? '' ?>" class="<?= error_class($errors, 'username') ?>">
-            <small><?= $errors['username'] ?? '' ?></small>
-        </div>
+        <div class="container-principal-sub">
+            <h1>Registro</h1>
+            
+            <div class="item-principal-sub">
+                <label for="username">Insira um Nome de Usuário:</label>    
+                <input type="text" name="username" id="username" value="<?= $inputs['username'] ?? '' ?>" class="<?= error_class($errors, 'username') ?>">
+                <small><?= $errors['username'] ?? '' ?></small>
+            </div>
 
-        <div>
-            <label for="email">Insira um Email:<label>    
-            <input type="email" name="email" id="email" value="<?= $inputs['email'] ?? '' ?>" class="<?= error_class($errors, 'email') ?>">
-            <small><?= $errors['email'] ?? '' ?></small>
-        </div>
+            <div class="item-principal-sub">
+                <label for="email">Insira um Email:</label>    
+                <input type="email" name="email" id="email" value="<?= $inputs['email'] ?? '' ?>" class="<?= error_class($errors, 'email') ?>">
+                <small><?= $errors['email'] ?? '' ?></small>
+            </div>
 
-        <div>
-            <label for="password">Insira uma Senha:</label>    
-            <input type="password" name="password" id="password" value="<?= $inputs['password'] ?? ''?>" class="<?= error_class($errors, 'password') ?>">
-            <small><?= $errors['password'] ?? '' ?></small>
-        </div>
+            <div class="item-principal-sub">
+                <label for="password">Insira uma Senha:</label>    
+                <input type="password" name="password" id="password" value="<?= $inputs['password'] ?? ''?>" class="<?= error_class($errors, 'password') ?>">
+                <small><?= $errors['password'] ?? '' ?></small>
+            </div>
 
-        <div>
-            <label for="password2">Confirme a Senha:</label>    
-            <input type="password" name="password2" id="password2" value="<?= $inputs['password2'] ?? '' ?>" class="<?= error_class($errors, 'password2') ?>">
-            <small><?= $errors['password2'] ?? '' ?></small>
-        </div>
+            <div class="item-principal-sub">
+                <label for="password2">Confirme a Senha:</label>    
+                <input type="password" name="password2" id="password2" value="<?= $inputs['password2'] ?? '' ?>" class="<?= error_class($errors, 'password2') ?>">
+                <small><?= $errors['password2'] ?? '' ?></small>
+            </div>
 
-        <div>
-            <label for="agree">
-                <input type="checkbox" name="agree" id="agree" value="checked" <?= $inputs['agree'] ?? '' ?> /> Eu aceito os
-                <a href="#" title="termo de uso">termos de uso</a>
-            </label>
-            <small><?= $errors['agree'] ?? '' ?></small>
-        </div>
+            <div class="item-principal-sub">
+                <label for="agree">
+                    <input type="checkbox" name="agree" id="agree" value="checked" <?= $inputs['agree'] ?? '' ?> /> Eu aceito os
+                    <a href="#" title="termo de uso">termos de uso</a>
+                </label>
+                <small><?= $errors['agree'] ?? '' ?></small>
+            </div>
 
-        <button type="submit">Registrar</button>
-        <footer>Já é um usuário? <a href="login.php">Clique aqui</a></footer>
+            <button type="submit">Registrar</button>
+            <footer>Já é um usuário? <a href="login.php">Clique aqui</a></footer>
+        </div>
     </form>
 </div>
 
