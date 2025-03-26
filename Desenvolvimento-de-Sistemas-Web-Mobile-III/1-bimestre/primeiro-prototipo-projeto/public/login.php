@@ -17,6 +17,8 @@ if (is_user_logged_in()) {
     </div>
 <?php endif ?>
 
+<link rel="stylesheet" href="css/login.css">
+
 <form action="login.php" method="post">
     <h1>Login</h1>
     
