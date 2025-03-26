@@ -99,6 +99,10 @@ footer {
     margin-top: 25px;
 }
 
+ul li{
+    list-style: none;
+}
+
 
 @media screen and (max-width: 768px) {
     .container-principal {
