@@ -158,3 +158,16 @@ function is_number(array $data, string $field): bool {
 
     return is_numeric($data[$field]) && preg_match('/^\d+(\.\d+)?$/', $data[$field]);
 }
+
+function is_valid_image_type(string $type): bool {
+    if (!isset($type)) {
+        return true;
+    }
+
+    $valid_types = ['image/jpg', 'image/jpeg', 'image/png'];
+    if (!in_array($type, $valid_types)) {
+        return false;
+    }
+
+    return true;
+}

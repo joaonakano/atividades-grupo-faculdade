@@ -53,3 +53,8 @@ function session_flash(...$keys): array {
     }
     return $data;
 }
+
+function archive_image_to_folder(array $data, string $target_directory) {
+    $target_file = $target_directory . basename($data['name']);
+    move_uploaded_file($data['tmp_name'], $target_file);
+}

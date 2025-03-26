@@ -13,6 +13,6 @@ require_login();
     </ul>
 </nav>
 
-<p>Bem-vindo, <?= current_user() ?> <a href="logout.php">Logout</a></p>
+<p>Bem-vindo, <?= current_user() ?>!</p>
 
 <?php view('footer') ?>
