@@ -10,7 +10,7 @@ if (is_user_logged_in()) {
 
 <?php view('header', ['title' => 'Registro']) ?>
 
-<link rel="stylesheet" href="css/register.css">
+<link rel="stylesheet" href="css/register_login.css">
 
 <div class="container-principal">
     <form action="register.php" method="post">

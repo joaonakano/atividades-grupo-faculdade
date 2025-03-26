@@ -17,27 +17,32 @@ if (is_user_logged_in()) {
     </div>
 <?php endif ?>
 
-<link rel="stylesheet" href="css/login.css">
+<link rel="stylesheet" href="css/register_login.css">
 
-<form action="login.php" method="post">
-    <h1>Login</h1>
-    
-    <div>
-        <label for="username">Insira um Nome de Usuário:</label>
-        <input type="text" name="username" id="username" value="<?= $inputs['username'] ?? '' ?>">
-        <small><?= $errors['login'] ?? '' ?></small>
-    </div>
-    
-    <div>
-        <label for="password">Insira uma Senha:</label>
-        <input type="password" name="password" id="password">
-        <small><?= $errors['password'] ?? '' ?></small>
-    </div>
-    
-    <section>
-        <button type="submit">Login</button>    
-        <a href="register.php">Registre-se</a>
-    </section>
-</form>
+<div class="container-principal">
+    <form action="login.php" method="post">
+        <div class="caixa-win">
+            <h1>Login</h1>
+        </div>
+        <div class="container-principal-sub">
+
+            <div class="item-principal-sub">
+                <label for="username">Insira um Nome de Usuário:</label>
+                <input type="text" name="username" id="username" value="<?= $inputs['username'] ?? '' ?>">
+                <small><?= $errors['login'] ?? '' ?></small>
+            </div>
+
+            <div class="item-principal-sub">
+                <label for="password">Insira uma Senha:</label>
+                <input type="password" name="password" id="password">
+                <small><?= $errors['password'] ?? '' ?></small>
+            </div>
+
+            <button type="submit">Login</button>   
+            <footer><a href="register.php">Registre-se</a></footer>
+        </div>
+
+    </form>
+</div>
 
 <?php view('footer') ?>
