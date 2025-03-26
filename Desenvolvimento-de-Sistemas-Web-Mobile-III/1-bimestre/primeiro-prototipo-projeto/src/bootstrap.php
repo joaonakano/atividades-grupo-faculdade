@@ -17,4 +17,6 @@ require_once __DIR__ . "/libs/filter.php";
 
 // Registro de Usuários
 require_once __DIR__ . "/auth.php";
-require_once __DIR__ . "/gameManagement.php";
+
+// Registro de Produtos
+require_once __DIR__ . "/product_manager.php";

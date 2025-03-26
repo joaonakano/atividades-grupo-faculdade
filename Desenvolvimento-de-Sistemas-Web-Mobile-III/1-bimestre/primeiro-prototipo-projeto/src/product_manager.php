@@ -1,6 +1,6 @@
 <?php
 
-function set_produto($title, $price): bool {
+function create_product($title, $price): bool {
     $sql = 'INSERT INTO games(title, price)
             VALUES (:title, :price)';
 
