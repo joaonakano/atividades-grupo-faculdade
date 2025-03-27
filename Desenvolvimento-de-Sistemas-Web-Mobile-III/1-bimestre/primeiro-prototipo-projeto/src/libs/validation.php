@@ -136,15 +136,23 @@ function is_secure(array $data, string $field): bool {
     return preg_match($pattern, $data[$field]);
 }
 
-function is_unique(array $data, string $field, string $table, string $column): bool {
+function is_unique(array $data, string $field, string $table, string $column, string $excludeField = null, string $excludeValue = null): bool {
     if (!isset($data[$field])) {
         return true;
     }
-
+        
     $sql = "SELECT $column FROM $table WHERE $column = :value";
+    $params = [":value" => $data[$field]];
+
+    if ($excludeField && $excludeValue) {
+        $sql .= " AND $excludeField != :exclude";
+        $params[":exclude"] = $excludeValue;
+    }
 
     $stmt = db()->prepare($sql);
-    $stmt->bindValue(":value", $data[$field]);
+    foreach ($params as $key => $value) {
+        $stmt->bindValue($key, $value);
+    }
 
     $stmt->execute();
 

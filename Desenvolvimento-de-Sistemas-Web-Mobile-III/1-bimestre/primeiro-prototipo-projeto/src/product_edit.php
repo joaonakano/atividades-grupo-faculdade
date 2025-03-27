@@ -6,7 +6,7 @@ $errors = [];
 if (is_post_request()) {
     [$inputs, $errors] = filter($_POST, [
         'old_title' => 'string | required',
-        'title' => 'string | required | unique: games, title',
+        'title' => 'string | required | unique: games, title, title, ' . ($_POST['old_title'] ?? ''),
         'price' => 'float | min: 0 | number | required',
         'publisher' => 'string | required',
         'genre' => 'string | required',
@@ -20,11 +20,6 @@ if (is_post_request()) {
         if (!is_valid_image_type($inputs['image']['type'])) {
             $errors['image'] = "Não é um tipo válido";
         }
-        
-        // Se não houverem erros de imagem, armazenar a imagem no servidor local, na pasta public/uploads
-        if (!$errors['image']) {
-            archive_image_to_folder($inputs['image'], 'uploads/');
-        }
     } else {
         $inputs['image']['name'] = null;
     }
@@ -34,6 +29,11 @@ if (is_post_request()) {
             'inputs' => $inputs,
             'errors' => $errors
         ]);
+    }
+
+    // Se não houverem erros de imagem, armazenar a imagem no servidor local, na pasta public/uploads
+    if (!$errors['image']) {
+        archive_image_to_folder($inputs['image'], 'uploads/');
     }
 
     if (update_product($inputs['old_title'], $inputs['title'], $inputs['price'], $inputs['publisher'], $inputs['genre'], $inputs['description'], $inputs['image']['name'])) {
