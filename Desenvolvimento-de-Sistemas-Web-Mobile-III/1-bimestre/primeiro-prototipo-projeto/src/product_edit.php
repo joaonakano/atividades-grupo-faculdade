@@ -1,0 +1,52 @@
+<?php
+
+$inputs = [];
+$errors = [];
+
+if (is_post_request()) {
+    [$inputs, $errors] = filter($_POST, [
+        'old_title' => 'string | required',
+        'title' => 'string | required | unique: games, title',
+        'price' => 'float | min: 0 | number | required',
+        'publisher' => 'string | required',
+        'genre' => 'string | required',
+        'description' => 'string | required'
+    ]);
+
+    $inputs['image'] = $_FILES['image'];
+
+    if ($inputs['image']['type'] != '' || $inputs['image']['type'] != null) {
+        // Se o tipo de imagem for diferente de JPG, JPEG ou PNG, retornar um erro
+        if (!is_valid_image_type($inputs['image']['type'])) {
+            $errors['image'] = "Não é um tipo válido";
+        }
+        
+        // Se não houverem erros de imagem, armazenar a imagem no servidor local, na pasta public/uploads
+        if (!$errors['image']) {
+            archive_image_to_folder($inputs['image'], 'uploads/');
+        }
+    } else {
+        $inputs['image']['name'] = null;
+    }
+
+    if ($errors) {
+        redirect_with('product_edit.php', [
+            'inputs' => $inputs,
+            'errors' => $errors
+        ]);
+    }
+
+    if (update_product($inputs['old_title'], $inputs['title'], $inputs['price'], $inputs['publisher'], $inputs['genre'], $inputs['description'], $inputs['image']['name'])) {
+        redirect_with_message(
+            'index.php',
+            'Produto atualizado com sucesso!'
+        );
+    }
+
+} elseif(is_get_request()) {
+    [$inputs, $errors] = session_flash('inputs', 'errors');
+    if (empty($inputs)) {
+        $inputs = $_GET;
+        $inputs['old_title'] = $inputs['title'];
+    }
+}
