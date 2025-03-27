@@ -35,7 +35,7 @@ if (is_post_request()) {
             archive_image_to_folder($inputs['image'], 'uploads/');
         }
     } else {
-        $inputs['image']['name'] = 'notavailable.png';
+        $inputs['image']['name'] = null;
     }
  
     if ($errors) {

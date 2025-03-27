@@ -1,13 +1,10 @@
 <?php
 
-$pdo = db();
-$sql = "SELECT * FROM games";
-$statement = $pdo->query($sql);
-$produtos = $statement->fetchAll(PDO::FETCH_ASSOC);
-
 if (!function_exists('getProdutos')) {
     function getProdutos() {
         global $produtos;
+        
+        $produtos = fetch_all_products();
         
         if (empty($produtos)) {
             return '<p>Nenhum produto cadastrado</p>';

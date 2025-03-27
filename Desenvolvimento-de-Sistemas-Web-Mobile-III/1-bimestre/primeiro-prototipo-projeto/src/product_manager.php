@@ -15,3 +15,11 @@ function create_product(string $title, $price, string $publisher, string $genre,
 
     return $statement->execute();
 }
+
+function fetch_all_products() {
+    $sql = "SELECT * FROM games";
+    $statement = db()->prepare($sql);
+    $statement->execute();
+    $produtos = $statement->fetchAll(PDO::FETCH_ASSOC);
+    return $produtos;
+}
