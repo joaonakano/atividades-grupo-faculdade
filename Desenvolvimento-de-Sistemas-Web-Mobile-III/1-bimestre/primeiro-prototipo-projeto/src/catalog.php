@@ -3,7 +3,7 @@
 if (!function_exists('getProdutos')) {
     function getProdutos() {
         global $produtos;
-        
+
         $produtos = fetch_all_products();
         
         if (empty($produtos)) {
@@ -26,7 +26,7 @@ if (!function_exists('getProdutos')) {
                             <p class="description">%s</p>
                         </div>
                         <div class="product-actions">
-                            <button class="action-btn" title="Editar" onclick="editarProduto(%d)">✏️</button>
+                            <button class="action-btn" title="Editar" onclick="window.location.href=\'product_edit.php?id=%d\'">✏️</button>
                             <button class="action-btn" title="Deletar" onclick="confirmarExclusao(%d)">❌</button>
                         </div>
                     </div>
@@ -39,10 +39,12 @@ if (!function_exists('getProdutos')) {
                 htmlspecialchars($produto['genre']),
                 htmlspecialchars($produto['publisher']),
                 htmlspecialchars($produto['description']),
-                $produto['id'], // ID para o botão de editar
+                htmlspecialchars($produto['id']), // Botao editar
                 $produto['id']  // ID para o botão de deletar
             );
         }
         return $output;
     }
 }
+
+# <button class="action-btn" title="Editar" onclick="editarProduto(%d)">✏️</button>
