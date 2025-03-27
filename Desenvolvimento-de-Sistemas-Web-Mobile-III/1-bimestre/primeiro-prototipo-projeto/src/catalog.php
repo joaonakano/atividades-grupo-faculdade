@@ -18,23 +18,29 @@ if (!function_exists('getProdutos')) {
                         <img src="%s" alt="%s">
                     </div>
                     <div class="product-info">
-                        <h2>%s</h2>
-                        <p class="price">Preço: R$ %s</p>
-                        <p class="genre">Gênero: %s</p>
-                        <p class="publisher">Editora: %s</p>
-                        <p class="description">%s</p>
+                        <div>
+                            <h2>%s</h2>
+                            <p class="price">Preço: R$ %s</p>
+                            <p class="genre">Gênero: %s</p>
+                            <p class="publisher">Editora: %s</p>
+                            <p class="description">%s</p>
+                        </div>
+                        <div class="product-actions">
+                            <button class="action-btn" title="Editar" onclick="editarProduto(%d)">✏️</button>
+                            <button class="action-btn" title="Deletar" onclick="confirmarExclusao(%d)">❌</button>
+                        </div>
                     </div>
                 </div>',
-                // Image path (assuming images are in /uploads/)
+                
                 !empty($produto['filename']) ? 'uploads/' . htmlspecialchars($produto['filename']) : 'images/default-game.jpg',
-                // Alt text for image
                 htmlspecialchars($produto['title']),
-                // Product details
                 htmlspecialchars($produto['title']),
                 htmlspecialchars($produto['price']),
                 htmlspecialchars($produto['genre']),
                 htmlspecialchars($produto['publisher']),
-                htmlspecialchars($produto['description'])
+                htmlspecialchars($produto['description']),
+                $produto['id'], // ID para o botão de editar
+                $produto['id']  // ID para o botão de deletar
             );
         }
         return $output;

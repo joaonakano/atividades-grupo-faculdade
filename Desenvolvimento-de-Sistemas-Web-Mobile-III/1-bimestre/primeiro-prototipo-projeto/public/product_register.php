@@ -5,18 +5,12 @@ require __DIR__ . "/../src/product_register.php";
 
 <?php view('header', ['title' => 'Cadastro de Jogo']); ?>
 
-<nav>
-    <ul>
-        <li><a href="logout.php">Logout</a></li>
-        <li><a href="catalog.php">Catálogo</a></li>
-        <li><a href="product_register.php">Cadastrar Jogo</a></li>
-    </ul>
-</nav>
+<link rel="stylesheet" href="css/product_register.css">
 <main>
     <h1>Cadastro de Jogo</h1>
     <form method="POST" enctype="multipart/form-data">
         <div>
-            <label for="title">Insira o Título:<label>
+            <label for="title">Insira o Título:</label>
             <input type="text" name="title" id="title" value="<?= $inputs['title'] ?? ''?>">
             <small><?= $errors['title'] ?? '' ?></small>
         </div>
