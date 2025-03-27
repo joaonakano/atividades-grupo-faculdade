@@ -8,7 +8,7 @@ require __DIR__ . "/../src/catalog.php";
 
 
 
-<!-- Painel aonde aparece os jogos -->
+
 <div class="catalog-container">
     
     <div class="window-content">

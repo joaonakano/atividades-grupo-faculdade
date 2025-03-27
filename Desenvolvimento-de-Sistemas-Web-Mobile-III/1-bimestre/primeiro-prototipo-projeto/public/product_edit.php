@@ -3,12 +3,14 @@ require __DIR__ . "/../src/bootstrap.php";
 require __DIR__ . "/../src/product_edit.php";
 ?>
 
+<link rel="stylesheet" href="css/product_register.css">
+
 <main>
     <h1>Edição de Produto</h1>
     <form method="POST" enctype="multipart/form-data">
         <div>
             <label for="old_title">Título Original:</label>    
-            <input type="text" name="old_title" id="old_title" value=<?= $inputs['old_title'] ?> readonly>
+            <input id="original_title" type="text" name="old_title" id="old_title" value=<?= $inputs['old_title'] ?> readonly>
             <small><?= $errors['old_title'] ?? '' ?></small>
         </div>
 

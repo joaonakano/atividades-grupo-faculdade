@@ -99,6 +99,11 @@ h1 {
     padding-bottom: 8px;
 }
 
+#original_title{
+    background: #3a3a3a;
+    color: #fff;
+}
+
 @media (max-width: 600px) {
     body {
         padding: 0;
