@@ -16,6 +16,19 @@ function create_product(string $title, $price, string $publisher, string $genre,
     return $statement->execute();
 }
 
+function get_product_by_id($id) {
+    $sql = 'SELECT * from games
+            WHERE id=:id';
+
+    $statement = db()->prepare($sql);    
+
+    $statement->bindValue(':id', $id, PDO::PARAM_STR);
+    $statement->execute();
+
+    $result = $statement->fetch(PDO::FETCH_ASSOC);
+    return $result;
+}
+
 function update_product(string $old_title, string $title, $price, string $publisher, string $genre, string $description, $image = ''): bool {
     $sql = 'UPDATE games
             SET title=:title, price=:price, publisher=:publisher, genre=:genre, description=:description, filename=:filename

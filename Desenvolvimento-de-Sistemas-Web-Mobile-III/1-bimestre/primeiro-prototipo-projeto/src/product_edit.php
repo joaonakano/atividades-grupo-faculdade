@@ -46,7 +46,24 @@ if (is_post_request()) {
 } elseif(is_get_request()) {
     [$inputs, $errors] = session_flash('inputs', 'errors');
     if (empty($inputs)) {
-        $inputs = $_GET;
-        $inputs['old_title'] = $inputs['title'];
+
+        if (empty($_GET)) {
+            redirect_to('catalog.php');
+        }
+
+        $product = get_product_by_id($_GET['id']);
+
+        if ($product == null) {
+            redirect_to('catalog.php');
+        }
+
+        $inputs = [
+            'old_title' => $product['title'],
+            'title' => $product['title'],
+            'price' => $product['price'],
+            'publisher' => $product['publisher'],
+            'genre' => $product['genre'],
+            'description' => $product['description']
+        ];
     }
 }
