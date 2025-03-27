@@ -27,20 +27,7 @@ main {
     box-sizing: border-box;
 }
 
-main::before {
-    content: "Cadastro de Jogo";
-    position: absolute;
-    top: -15px;
-    left: 10px;
-    background: linear-gradient(to right, #000080, #1084d0);
-    color: white;
-    padding: 2px 8px;
-    font-size: 12px;
-    font-weight: bold;
-    border: 2px solid;
-    border-color: #ffffff #808080 #808080 #ffffff;
-    
-}
+
 
 form {
     display: flex;
