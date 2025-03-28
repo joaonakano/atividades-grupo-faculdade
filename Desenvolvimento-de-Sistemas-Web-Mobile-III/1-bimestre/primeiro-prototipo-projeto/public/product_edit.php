@@ -9,8 +9,12 @@ require __DIR__ . "/../src/product_edit.php";
     <h1>Edição de Produto</h1>
     <form method="POST" enctype="multipart/form-data">
         <div>
+            <input type="hidden" name="id" value="<?= $_GET['id'] ?>">
+        </div>
+        
+        <div>
             <label for="old_title">Título Original:</label>    
-            <input id="original_title" type="text" name="old_title" id="old_title" value=<?= $inputs['old_title'] ?> readonly>
+            <input id="original_title" type="text" name="old_title" id="old_title" value="<?= $inputs['old_title'] ?>" readonly>
             <small><?= $errors['old_title'] ?? '' ?></small>
         </div>
 

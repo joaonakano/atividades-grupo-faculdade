@@ -5,8 +5,8 @@ $errors = [];
 
 if (is_post_request()) {
     [$inputs, $errors] = filter($_POST, [
-        'old_title' => 'string | required',
-        'title' => 'string | required | unique: games, title, title, ' . ($_POST['old_title'] ?? ''),
+        'id' => 'number | required',
+        'title' => 'string | required | unique: games, title, id, ' . ($_POST['id'] ?? ''),
         'price' => 'float | min: 0 | number | required',
         'publisher' => 'string | required',
         'genre' => 'string | required',
@@ -36,7 +36,7 @@ if (is_post_request()) {
         archive_image_to_folder($inputs['image'], 'uploads/');
     }
 
-    if (update_product($inputs['old_title'], $inputs['title'], $inputs['price'], $inputs['publisher'], $inputs['genre'], $inputs['description'], $inputs['image']['name'])) {
+    if (update_product($inputs['id'], $inputs['title'], $inputs['price'], $inputs['publisher'], $inputs['genre'], $inputs['description'], $inputs['image']['name'])) {
         redirect_with_message(
             'index.php',
             'Produto atualizado com sucesso!'

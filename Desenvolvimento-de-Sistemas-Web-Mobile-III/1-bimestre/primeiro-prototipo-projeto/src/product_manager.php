@@ -29,10 +29,10 @@ function get_product_by_id($id) {
     return $result;
 }
 
-function update_product(string $old_title, string $title, $price, string $publisher, string $genre, string $description, $image = ''): bool {
+function update_product(int $id, string $title, $price, string $publisher, string $genre, string $description, $image = ''): bool {
     $sql = 'UPDATE games
             SET title=:title, price=:price, publisher=:publisher, genre=:genre, description=:description, filename=:filename
-            WHERE title=:old_title';
+            WHERE id=:id';
 
     $statement = db()->prepare($sql);
 
@@ -42,7 +42,7 @@ function update_product(string $old_title, string $title, $price, string $publis
     $statement->bindValue(':genre', $genre, PDO::PARAM_STR);
     $statement->bindValue(':description', $description, PDO::PARAM_STR);
     $statement->bindValue(':filename', $image, PDO::PARAM_STR);
-    $statement->bindValue(':old_title', $old_title, PDO::PARAM_STR);
+    $statement->bindValue(':id', $id, PDO::PARAM_INT);
     
     return $statement->execute();
 }
