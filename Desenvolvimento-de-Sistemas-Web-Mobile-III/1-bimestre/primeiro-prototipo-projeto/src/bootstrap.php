@@ -23,3 +23,4 @@ require_once __DIR__ . "/product_manager.php";
 
 // Leitura de Produtos
 require_once __DIR__ . "/catalog.php";
+
