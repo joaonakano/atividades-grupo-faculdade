@@ -1,6 +1,7 @@
 <?php
 require __DIR__ . "/../src/bootstrap.php";
 require __DIR__ . "/../src/product_register.php";
+require_login();
 ?>
 
 <?php view('header', ['title' => 'Cadastro de Jogo']); ?>

@@ -8,8 +8,8 @@ require_login();
 <link rel="stylesheet" href="css/register_login.css">
 
 <div class="container-principal">
-    <div class="container-principal-sub">
-        <nav>
+    <div>
+        <nav class="skibidi">
             <p>Bem-vindo, <?= current_user() ?>!</p>
 
             <ul>

@@ -1,7 +1,7 @@
 <?php
 require __DIR__ . "/../src/bootstrap.php";
 require __DIR__ . "/../src/catalog.php";
-
+require_login();
 ?>
 
 <?php view('header', ['title' => 'Catálogo - Windows 95']) ?>

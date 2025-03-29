@@ -1,7 +1,7 @@
 <?php
 
 require __DIR__ . '/../src/bootstrap.php';
-
+require_login();
 if (isset($_GET['id'])) {
     $id = intval($_GET['id']);
 

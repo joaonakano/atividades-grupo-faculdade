@@ -9,7 +9,9 @@ if (is_user_logged_in()) {
 
 ?>
 
-<?php view("header", ['title' => 'Login']) ?>
+<head>
+    <title>Login</title>
+</head>
 
 <?php if (isset($errors['login'])) : ?>
     <div class="alert alert-error">

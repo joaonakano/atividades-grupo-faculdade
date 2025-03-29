@@ -1,6 +1,7 @@
 <?php
 require __DIR__ . "/../src/bootstrap.php";
 require __DIR__ . "/../src/product_edit.php";
+require_login();
 ?>
 
 <link rel="stylesheet" href="css/product_register.css">

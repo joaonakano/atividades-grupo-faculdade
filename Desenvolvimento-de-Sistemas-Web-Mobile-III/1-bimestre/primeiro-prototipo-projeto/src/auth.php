@@ -53,6 +53,7 @@ function logout(): void {
         session_destroy();
         redirect_to('login.php');
     }
+    redirect_to('login.php');
 }
 
 function current_user() {

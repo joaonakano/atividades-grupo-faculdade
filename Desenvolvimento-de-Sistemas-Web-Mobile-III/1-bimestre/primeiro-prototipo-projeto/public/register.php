@@ -1,14 +1,15 @@
 <?php
 require __DIR__ . "/../src/bootstrap.php";
 require __DIR__ . "/../src/register.php";
-
 if (is_user_logged_in()) {
     redirect_to("index.php");
 }
 
 ?>
 
-<?php view('header', ['title' => 'Registro']) ?>
+<head>
+    <title>Registro</title>
+</head>
 
 <link rel="stylesheet" href="css/register_login.css">
 
